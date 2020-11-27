@@ -9,20 +9,20 @@ class StackNode:
 class Stack:
     
     def __init__(self):
-        self.root = None
+        self.head = None
         
     # The method push to push element into the stack
     def push(self, data):
         newNode = StackNode(data)
-        newNode.next = self.root
-        self.root = newNode
+        newNode.next = self.head
+        self.head = newNode
         
     # The method pop which return the element popped out of the stack
     def pop(self):
-        if(self.root == None):
+        if(self.head == None):
             return -1
-        temp = self.root
-        self.root = self.root.next
+        temp = self.head
+        self.head = self.head.next
         return temp.data
 
 #{ 
